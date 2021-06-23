@@ -1,9 +1,8 @@
-class Category < ApplicationRecord
+class Link < ApplicationRecord
 
-  validates :link, :name, :categorie_id, :id_channel, presence: true
+  validates :link, :name, :category, :id_channel, presence: true
   validates_format_of :link, :with => /\A(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?\Z/i
 
-  belong_to :category, dependent: :destroy
 
   scope :by_channel, ->(id_channel) {where(id_channel: id_channel) }
   scope :by_name, ->(name) { where('unaccent(name) ILIKE unaccent(?)', "%#{name}%") }

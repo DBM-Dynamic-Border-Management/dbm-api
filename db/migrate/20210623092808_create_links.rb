@@ -6,7 +6,6 @@ class CreateLinks < ActiveRecord::Migration[6.1]
       t.string :category
       t.integer :id_channel, null: false
       t.boolean :is_primary, default: false
-      t.references :categories, null: false
       t.datetime :created_at
     end
   end

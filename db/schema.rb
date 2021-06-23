@@ -21,9 +21,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_092808) do
     t.string "category"
     t.integer "id_channel", null: false
     t.boolean "is_primary", default: false
-    t.bigint "categories_id", null: false
     t.datetime "created_at"
-    t.index ["categories_id"], name: "index_links_on_categories_id"
   end
 
 end
