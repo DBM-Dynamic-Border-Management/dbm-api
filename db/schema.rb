@@ -15,14 +15,10 @@ ActiveRecord::Schema.define(version: 2021_06_23_092808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "id_channel", null: false
-  end
-
   create_table "links", force: :cascade do |t|
     t.string "name", null: false
     t.string "link", null: false
+    t.string "category"
     t.integer "id_channel", null: false
     t.boolean "is_primary", default: false
     t.bigint "categories_id", null: false

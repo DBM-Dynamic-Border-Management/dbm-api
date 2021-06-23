@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
 
-  validates :link, :name, :categorie_id, , :id_channel, presence: true
+  validates :link, :name, :categorie_id, :id_channel, presence: true
   validates_format_of :link, :with => /\A(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?\Z/i
 
   belong_to :category, dependent: :destroy
