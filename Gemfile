@@ -7,21 +7,17 @@ ruby "3.0.0"
 gem 'rails', "~> 6.1.3.1"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1.4'
-# Use Puma as the app server
+# puma
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 6.0'
-# HTML templating
 gem 'slim-rails'
 # cors
 gem 'rack-cors'
+# has_scope
+gem 'has_scope'
 # Background jobs
 gem 'sidekiq'
-# auth
-gem 'devise'
   
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'awesome_print'

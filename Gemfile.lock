@@ -69,7 +69,6 @@ GEM
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
     awesome_print (1.9.2)
-    bcrypt (3.1.16)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -87,12 +86,6 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    devise (4.8.0)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 4.1.0)
-      responders
-      warden (~> 1.2.3)
     diff-lcs (1.4.4)
     docile (1.4.0)
     erubi (1.10.0)
@@ -104,6 +97,9 @@ GEM
     ffi (1.15.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    has_scope (0.8.0)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
     hashdiff (1.0.1)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
@@ -124,7 +120,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
-    orm_adapter (0.5.0)
     parallel (1.20.1)
     parser (3.0.1.1)
       ast (~> 2.4.1)
@@ -171,9 +166,6 @@ GEM
       ffi (~> 1.0)
     redis (4.3.1)
     regexp_parser (2.1.1)
-    responders (3.0.1)
-      actionpack (>= 5.0)
-      railties (>= 5.0)
     rexml (3.2.5)
     rollbar (3.2.0)
     rspec-core (3.10.1)
@@ -215,16 +207,6 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
     ruby-prof (1.4.3)
     ruby-progressbar (1.11.0)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.4.0)
-      ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     sidekiq (6.2.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
@@ -259,14 +241,9 @@ GEM
     thor (1.1.0)
     tilt (2.0.10)
     timecop (0.9.4)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)
-    warden (1.2.9)
-      rack (>= 2.0.9)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -293,8 +270,8 @@ DEPENDENCIES
   brakeman
   bundler-audit (>= 0.5.0)
   byebug
-  devise
   factory_bot_rails
+  has_scope
   listen (~> 3.0.5)
   pg (~> 1.1.4)
   puma (~> 5.0)
@@ -307,7 +284,6 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   ruby-prof (>= 0.17.0)
-  sass-rails (~> 6.0)
   sidekiq
   simplecov
   slim-rails
@@ -316,7 +292,6 @@ DEPENDENCIES
   stackprof (>= 0.2.9)
   test-prof
   timecop
-  turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
   webmock
