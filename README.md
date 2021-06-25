@@ -1,4 +1,4 @@
-# dbm
+# DBM-API
 
 This is a Rails 6 app.
 
@@ -74,3 +74,8 @@ Optionally:
 [rbenv]:https://github.com/sstephenson/rbenv
 [redis]:http://redis.io
 [Homebrew]:http://brew.sh
+
+
+## Contribute
+
+If you have any issues or idea to contribute to the app, create an issue and explain everything inside
